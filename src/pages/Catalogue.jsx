@@ -1,59 +1,103 @@
-const productCategories = [
+const productGroups = [
   {
-    title: 'iPhones',
+    group: 'Phones',
     description:
-      'iPhones from older reliable models to newer premium models, depending on availability.',
-    examples: ['iPhone XR and newer', 'iPhone 11–15 series', 'Pro and Pro Max models'],
-    icon: '📱',
+      'Smartphones for personal use, business communication, content creation, and daily productivity.',
+    products: [
+      {
+        name: 'iPhones',
+        details: 'iPhone XR and newer, including Pro and Pro Max models depending on availability.',
+        examples: ['iPhone XR and newer', 'iPhone 11–15 series', 'Pro / Pro Max models'],
+        icon: '📱',
+      },
+      {
+        name: 'Samsung Phones',
+        details: 'Samsung Galaxy A series, S series, Ultra models, and other Android options.',
+        examples: ['Galaxy A series', 'Galaxy S series', 'Ultra models'],
+        icon: '📲',
+      },
+      {
+        name: 'Google Pixel Phones',
+        details: 'Pixel phones for clean Android performance, strong camera quality, and software reliability.',
+        examples: ['Pixel 6 series', 'Pixel 7 series', 'Pixel 8 series and newer'],
+        icon: '📷',
+      },
+    ],
   },
   {
-    title: 'Samsung Phones',
+    group: 'Laptops',
     description:
-      'Samsung Galaxy A series, S series, Ultra models, and other available Android devices.',
-    examples: ['Galaxy A series', 'Galaxy S series', 'Ultra models'],
-    icon: '📲',
+      'Laptops for students, office users, business work, programming, design, and general productivity.',
+    products: [
+      {
+        name: 'HP Laptops',
+        details: 'HP laptops for school, office, business, and everyday work.',
+        examples: ['Core i5 options', 'Core i7 options', 'Business laptops'],
+        icon: '💻',
+      },
+      {
+        name: 'Dell Laptops',
+        details: 'Dell laptops suitable for work, study, business, programming, and general use.',
+        examples: ['Core i5 laptops', 'Core i7 laptops', 'Office laptops'],
+        icon: '🖥️',
+      },
+      {
+        name: 'MacBooks',
+        details: 'MacBook Air and MacBook Pro models for premium work, study, design, and business use.',
+        examples: ['MacBook Air', 'MacBook Pro', 'Intel and Apple Silicon models'],
+        icon: '🍎',
+      },
+    ],
   },
   {
-    title: 'Google Pixel Phones',
+    group: 'Wearables & Audio',
     description:
-      'Google Pixel phones for customers who want clean Android performance and strong camera quality.',
-    examples: ['Pixel 6 series', 'Pixel 7 series', 'Pixel 8 series and newer'],
-    icon: '📷',
+      'Smart watches, earbuds, and audio accessories for communication, fitness, and daily convenience.',
+    products: [
+      {
+        name: 'Apple Watch',
+        details: 'Apple Watch models for fitness, notifications, calls, and iPhone users.',
+        examples: ['Apple Watch Series', 'Apple Watch SE', 'Apple Watch Ultra'],
+        icon: '⌚',
+      },
+      {
+        name: 'Samsung Watch',
+        details: 'Samsung Galaxy Watch models for Android users, health tracking, and smart features.',
+        examples: ['Galaxy Watch 4 and newer', 'Classic models', 'LTE options where available'],
+        icon: '⌚',
+      },
+      {
+        name: 'AirPods & Samsung Buds',
+        details: 'Wireless earbuds for calls, music, meetings, and everyday use.',
+        examples: ['AirPods', 'AirPods Pro', 'Samsung Buds'],
+        icon: '🎧',
+      },
+    ],
   },
   {
-    title: 'HP Laptops',
+    group: 'Accessories & Support',
     description:
-      'HP laptops for students, office users, businesses, and general productivity needs.',
-    examples: ['Core i5 laptops', 'Core i7 laptops', 'Business laptops'],
-    icon: '💻',
-  },
-  {
-    title: 'Dell Laptops',
-    description:
-      'Dell laptops suitable for school, work, business, programming, and daily use.',
-    examples: ['Core i5 options', 'Core i7 options', 'Office laptops'],
-    icon: '🖥️',
-  },
-  {
-    title: 'MacBooks',
-    description:
-      'MacBook devices for users who need premium performance for work, study, design, and business.',
-    examples: ['MacBook Pro', 'MacBook Air', 'Intel and Apple Silicon models'],
-    icon: '🍎',
-  },
-  {
-    title: 'Smart Watches',
-    description:
-      'Smart watches for fitness tracking, notifications, calls, and daily convenience.',
-    examples: ['Apple Watch', 'Samsung Watch', 'Other smart watches'],
-    icon: '⌚',
-  },
-  {
-    title: 'Earbuds & Accessories',
-    description:
-      'Wireless earbuds, AirPods, Samsung Buds, chargers, cases, and selected accessories.',
-    examples: ['AirPods', 'Samsung Buds', 'Chargers and cases'],
-    icon: '🎧',
+      'Selected accessories and after-sale support to help customers set up and use their devices properly.',
+    products: [
+      {
+        name: 'Chargers & Cables',
+        details: 'Selected phone and laptop charging accessories depending on availability.',
+        examples: ['Phone chargers', 'USB cables', 'Laptop chargers'],
+        icon: '🔌',
+      },
+      {
+        name: 'Cases & Protection',
+        details: 'Basic protection accessories for phones and selected devices.',
+        examples: ['Phone cases', 'Screen protectors', 'Device protection'],
+        icon: '🛡️',
+      },
+      {
+        name: 'Device Setup Support',
+        details: 'Assistance with basic setup, software support, email setup, and device guidance.',
+        examples: ['Phone setup', 'Email setup', 'Software assistance'],
+        icon: '🛠️',
+      },
+    ],
   },
 ]
 
@@ -67,17 +111,18 @@ function Catalogue() {
           </p>
 
           <h1 className="mt-4 max-w-4xl text-4xl font-black leading-tight md:text-6xl">
-            Phones, laptops, smart watches and accessories.
+            Phones, laptops, wearables, audio and accessories.
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-            Browse our main product categories. Availability and prices may change, so customers
-            can contact Chansa Enterprises directly on WhatsApp for current stock and quotations.
+            Browse product categories offered by Chansa Enterprises. Availability,
+            specifications, condition, and prices may change, so customers can contact us
+            directly on WhatsApp for current options and quotations.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
-              href="https://wa.me/260967644528"
+              href="https://wa.me/260967644528?text=Hello%20Chansa%20Enterprises,%20I%20would%20like%20to%20ask%20about%20available%20electronics%20and%20prices."
               className="rounded-full bg-cyan-400 px-7 py-3 text-center font-semibold text-slate-950 hover:bg-cyan-300"
             >
               Ask for Current Stock
@@ -93,70 +138,89 @@ function Catalogue() {
         </div>
       </section>
 
-      <section className="bg-slate-100 px-6 py-20 text-slate-950">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {productCategories.map((category) => (
-              <div
-                key={category.title}
-                className="rounded-3xl bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-100 text-2xl">
-                  {category.icon}
-                </div>
+      {productGroups.map((group, index) => (
+        <section
+          key={group.group}
+          className={`px-6 py-20 text-slate-950 ${
+            index % 2 === 0 ? 'bg-slate-100' : 'bg-white'
+          }`}
+        >
+          <div className="mx-auto max-w-7xl">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-700">
+                {group.group}
+              </p>
 
-                <h2 className="text-xl font-bold">{category.title}</h2>
+              <h2 className="mt-4 text-3xl font-bold md:text-5xl">
+                {group.group} available on request.
+              </h2>
 
-                <p className="mt-4 text-sm leading-7 text-slate-600">
-                  {category.description}
-                </p>
+              <p className="mt-4 text-slate-600">{group.description}</p>
+            </div>
 
-                <div className="mt-5 space-y-2">
-                  {category.examples.map((item) => (
-                    <div key={item} className="flex items-center gap-3 text-sm text-slate-700">
-                      <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <a
-                  href={`https://wa.me/260967644528?text=Hello%20Chansa%20Enterprises,%20I%20am%20interested%20in%20${encodeURIComponent(
-                    category.title,
-                  )}.%20Please%20send%20me%20available%20options%20and%20prices.`}
-                  className="mt-6 inline-block text-sm font-semibold text-cyan-700"
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              {group.products.map((product) => (
+                <div
+                  key={product.name}
+                  className="flex flex-col rounded-3xl bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
                 >
-                  Request prices →
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-100 text-2xl">
+                    {product.icon}
+                  </div>
 
-      <section className="bg-white px-6 py-20 text-slate-950">
+                  <h3 className="text-xl font-bold">{product.name}</h3>
+
+                  <p className="mt-4 text-sm leading-7 text-slate-600">
+                    {product.details}
+                  </p>
+
+                  <div className="mt-5 space-y-2">
+                    {product.examples.map((item) => (
+                      <div key={item} className="flex items-center gap-3 text-sm text-slate-700">
+                        <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <a
+                    href={`https://wa.me/260967644528?text=Hello%20Chansa%20Enterprises,%20I%20am%20interested%20in%20${encodeURIComponent(
+                      product.name,
+                    )}.%20Please%20send%20me%20available%20options%20and%20prices.`}
+                    className="mt-8 inline-block rounded-full bg-slate-950 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-slate-800"
+                  >
+                    Request prices
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
+
+      <section className="bg-slate-950 px-6 py-20 text-white">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
-          <div className="rounded-3xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="text-xl font-bold">How ordering works</h3>
-            <p className="mt-4 text-sm leading-7 text-slate-600">
-              Customers request a product category, then Chansa Enterprises confirms available
-              models, specifications, condition, and price.
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h3 className="text-xl font-bold text-cyan-300">How ordering works</h3>
+            <p className="mt-4 text-sm leading-7 text-slate-300">
+              Customers request a product category or model, then Chansa Enterprises
+              confirms available options, specifications, condition, and current price.
             </p>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="text-xl font-bold">Prices on request</h3>
-            <p className="mt-4 text-sm leading-7 text-slate-600">
-              Electronics prices change frequently. Showing prices on request helps avoid outdated
-              listings and allows customers to receive current quotations.
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h3 className="text-xl font-bold text-cyan-300">Prices on request</h3>
+            <p className="mt-4 text-sm leading-7 text-slate-300">
+              Electronics prices change frequently. Quoting on request helps customers
+              receive accurate and current prices before ordering.
             </p>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="text-xl font-bold">Business support</h3>
-            <p className="mt-4 text-sm leading-7 text-slate-600">
-              We can support customers with device setup, software assistance, email setup, and
-              general technical guidance after purchase.
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h3 className="text-xl font-bold text-cyan-300">Support available</h3>
+            <p className="mt-4 text-sm leading-7 text-slate-300">
+              We can help customers with basic device setup, email setup, software
+              support, and general technical guidance after purchase.
             </p>
           </div>
         </div>
@@ -173,12 +237,12 @@ function Catalogue() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-slate-300">
-            Contact Chansa Enterprises for phones, laptops, watches, earbuds, and selected
-            accessories.
+            Contact Chansa Enterprises for phones, laptops, watches, earbuds,
+            accessories, and device support.
           </p>
 
           <a
-            href="https://wa.me/260967644528"
+            href="https://wa.me/260967644528?text=Hello%20Chansa%20Enterprises,%20I%20am%20looking%20for%20a%20device.%20Please%20help%20me%20confirm%20availability%20and%20price."
             className="mt-8 inline-block rounded-full bg-cyan-400 px-8 py-3 font-semibold text-slate-950 hover:bg-cyan-300"
           >
             Chat on WhatsApp
