@@ -50,8 +50,8 @@ function Footer() {
               Call: +260 967 644 528
             </a>
 
-            <a href="mailto:chansakelvin438@gmail.com" className="hover:text-cyan-300">
-              chansakelvin438@gmail.com
+            <a href="mailto:info@chansaenterprises.com" className="hover:text-cyan-300">
+              info@chansaenterprises.com
             </a>
 
             <span>chansaenterprises.com</span>

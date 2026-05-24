@@ -9,10 +9,10 @@ const contactOptions = [
   },
   {
     title: 'Email',
-    detail: 'chansakelvin438@gmail.com',
+    detail: 'info@chansaenterprises.com',
     description: 'Send formal enquiries, service requests, quotations, and business communication.',
     action: 'Send Email',
-    link: 'mailto:chansakelvin438@gmail.com',
+    link: 'mailto:info@chansaenterprises.com',
     icon: '✉️',
   },
   {
@@ -52,7 +52,7 @@ function Contact() {
             </a>
 
             <a
-              href="mailto:chansakelvin438@gmail.com"
+              href="mailto:info@chansaenterprises.com"
               className="rounded-full border border-white/20 px-7 py-3 text-center font-semibold text-white hover:bg-white/10"
             >
               Send Email
