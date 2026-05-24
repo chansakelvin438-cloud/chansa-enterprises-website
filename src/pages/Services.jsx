@@ -55,6 +55,87 @@ const services = [
   },
 ]
 
+const packages = [
+  {
+    name: 'Basic Website Package',
+    price: 'Request Quote',
+    description:
+      'Ideal for individuals, small businesses, portfolios, and simple company profiles.',
+    features: [
+      'Up to 3 website pages',
+      'Mobile-friendly design',
+      'WhatsApp contact button',
+      'Basic SEO setup',
+      'Domain connection support',
+    ],
+  },
+  {
+    name: 'Business Website Package',
+    price: 'Request Quote',
+    description:
+      'Best for growing businesses that need a stronger online presence and professional contact setup.',
+    features: [
+      'Up to 5 website pages',
+      'Business email setup',
+      'Hosting and domain support',
+      'Contact and enquiry sections',
+      'Professional service presentation',
+    ],
+  },
+  {
+    name: 'Premium Website Package',
+    price: 'Request Quote',
+    description:
+      'For businesses that need advanced sections, catalogues, stronger branding, and future scalability.',
+    features: [
+      'Multiple website sections',
+      'Catalogue or product categories',
+      'Advanced layout design',
+      'SEO and sitemap setup',
+      'Future upgrade readiness',
+    ],
+  },
+  {
+    name: 'Business Email Setup',
+    price: 'Request Quote',
+    description:
+      'Professional email setup using your own domain, such as info@yourbusiness.com.',
+    features: [
+      'Custom email address setup',
+      'DNS email configuration',
+      'Webmail login guidance',
+      'Phone and laptop setup guidance',
+      'SPF/DKIM support where available',
+    ],
+  },
+  {
+    name: 'Domain & Hosting Setup',
+    price: 'Request Quote',
+    description:
+      'Support for buying domains, connecting DNS, setting up hosting, SSL, and deployment.',
+    features: [
+      'Domain registration guidance',
+      'DNS configuration',
+      'SSL setup',
+      'Hosting/deployment support',
+      'Website launch assistance',
+    ],
+  },
+  {
+    name: 'IT Support Package',
+    price: 'Request Quote',
+    description:
+      'Practical technical support for software issues, devices, networks, and business systems.',
+    features: [
+      'Software troubleshooting',
+      'Phone and laptop support',
+      'Network setup guidance',
+      'System configuration help',
+      'General technical assistance',
+    ],
+  },
+]
+
 function Services() {
   return (
     <>
@@ -133,46 +214,108 @@ function Services() {
         </div>
       </section>
 
-      <section className="bg-slate-100 px-6 py-20 text-slate-950">
-        <div className="mx-auto max-w-7xl rounded-3xl bg-slate-950 p-8 text-white md:p-12">
-          <div className="grid gap-8 md:grid-cols-2 md:items-center">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
-                Service Packages
+     <section className="bg-slate-100 px-6 py-20 text-slate-950">
+           <div className="mx-auto max-w-7xl">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-700">
+              Service Packages
               </p>
 
-              <h2 className="mt-4 text-3xl font-bold md:text-4xl">
-                Need a complete business setup?
+              <h2 className="mt-4 text-3xl font-bold md:text-5xl">
+              Choose a package that fits your business needs.
               </h2>
 
-              <p className="mt-4 leading-7 text-slate-300">
-                We can combine domain registration, hosting, business email, website
-                development, graphics, and support into one complete package.
+              <p className="mt-4 text-slate-600">
+               These packages help customers understand what Chansa Enterprises can deliver.
+               Final pricing depends on the scope, number of pages, features, hosting needs,
+               and support requirements.
               </p>
-            </div>
+           </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <h3 className="text-xl font-bold text-cyan-300">Recommended Starter Package</h3>
+           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+             {packages.map((item) => (
+             <div
+                key={item.name}
+                className="flex flex-col rounded-3xl bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+             >
+              <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-700">
+                    {item.price}
+                    </p>
 
-              <ul className="mt-5 space-y-3 text-sm text-slate-300">
-                <li>✓ Domain setup</li>
-                <li>✓ Business website</li>
-                <li>✓ WhatsApp contact button</li>
-                <li>✓ Business email setup</li>
-                <li>✓ Basic search engine readiness</li>
-                <li>✓ Mobile-friendly design</li>
-              </ul>
+                    <h3 className="mt-3 text-2xl font-bold">{item.name}</h3>
 
-              <a
-                href="https://wa.me/260967644528"
-                className="mt-6 inline-block rounded-full bg-cyan-400 px-6 py-3 font-semibold text-slate-950 hover:bg-cyan-300"
-              >
-                Request Package Quote
-              </a>
+                        <p className="mt-4 text-sm leading-7 text-slate-600">
+                    {item.description}
+                        </p>
+
+                    <div className="mt-6 space-y-3">
+                        {item.features.map((feature) => (
+                        <div key={feature} className="flex items-center gap-3 text-sm text-slate-700">
+                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-cyan-100 text-xs font-bold text-cyan-700">
+                            ✓
+                            </span>
+                            <span>{feature}</span>
+                </div>
+              ))}
             </div>
           </div>
+
+          <a
+            href={`https://wa.me/260967644528?text=Hello%20Chansa%20Enterprises,%20I%20am%20interested%20in%20the%20${encodeURIComponent(
+              item.name,
+            )}.%20Please%20send%20me%20more%20details.`}
+            className="mt-8 inline-block rounded-full bg-slate-950 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-slate-800"
+          >
+            Ask for this package
+          </a>
         </div>
-      </section>
+      ))}
+    </div>
+
+                <div className="mt-12 rounded-3xl bg-slate-950 p-8 text-white md:p-12">
+                    <div className="grid gap-8 md:grid-cols-2 md:items-center">
+                        <div>
+                            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
+                                Custom Solutions
+                            </p>
+
+                            <h2 className="mt-4 text-3xl font-bold md:text-4xl">
+                                Need something different?
+                            </h2>
+
+                            <p className="mt-4 leading-7 text-slate-300">
+                                Chansa Enterprises can combine website development, domain setup,
+                                business email, hosting, graphics, catalogue sections, and IT support
+                                into one custom package.
+                            </p>
+                        </div>
+
+                        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                            <h3 className="text-xl font-bold text-cyan-300">
+                                Recommended for new businesses
+                            </h3>
+
+                            <ul className="mt-5 space-y-3 text-sm text-slate-300">
+                                <li>✓ Domain name</li>
+                                <li>✓ Business email</li>
+                                <li>✓ Website design</li>
+                                <li>✓ WhatsApp enquiry button</li>
+                                <li>✓ Search engine readiness</li>
+                                <li>✓ Mobile-friendly layout</li>
+                            </ul>
+
+                            <a
+                                href="https://wa.me/260967644528?text=Hello%20Chansa%20Enterprises,%20I%20need%20a%20custom%20business%20technology%20package."
+                                className="mt-6 inline-block rounded-full bg-cyan-400 px-6 py-3 font-semibold text-slate-950 hover:bg-cyan-300"
+                            >
+                                Request Custom Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+      </div>
+    </section>
     </>
   )
 }
