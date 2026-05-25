@@ -1,3 +1,17 @@
+import iphoneImg from '../assets/products/iphone.jpg'
+import samsungImg from '../assets/products/samsung.jpg'
+import pixelImg from '../assets/products/pixel.jpg'
+import hpImg from '../assets/products/hp-laptop.jpg'
+import dellImg from '../assets/products/dell-laptop.jpg'
+import macbookImg from '../assets/products/macbook.jpg'
+import appleWatchImg from '../assets/products/apple-watch.jpg'
+import samsungWatchImg from '../assets/products/samsung-watch.jpg'
+import airpodsImg from '../assets/products/airpods.jpg'
+import samsungbudsImg from '../assets/products/samsungbuds.jpg'
+import chargersImg from '../assets/products/chargers.jpg'
+import casesImg from '../assets/products/cases.jpg'
+import supportImg from '../assets/products/device-setup-support.jpg'
+
 const productGroups = [
   {
     group: 'Phones',
@@ -9,18 +23,21 @@ const productGroups = [
         details: 'iPhone XR and newer, including Pro and Pro Max models depending on availability.',
         examples: ['iPhone XR and newer', 'iPhone 11–15 series', 'Pro / Pro Max models'],
         icon: '📱',
+        image: iphoneImg,
       },
       {
         name: 'Samsung Phones',
         details: 'Samsung Galaxy A series, S series, Ultra models, and other Android options.',
         examples: ['Galaxy A series', 'Galaxy S series', 'Ultra models'],
         icon: '📲',
+        image: samsungImg,
       },
       {
         name: 'Google Pixel Phones',
         details: 'Pixel phones for clean Android performance, strong camera quality, and software reliability.',
         examples: ['Pixel 6 series', 'Pixel 7 series', 'Pixel 8 series and newer'],
         icon: '📷',
+        image: pixelImg,
       },
     ],
   },
@@ -34,18 +51,21 @@ const productGroups = [
         details: 'HP laptops for school, office, business, and everyday work.',
         examples: ['Core i5 options', 'Core i7 options', 'Business laptops'],
         icon: '💻',
+        image: hpImg,
       },
       {
         name: 'Dell Laptops',
         details: 'Dell laptops suitable for work, study, business, programming, and general use.',
         examples: ['Core i5 laptops', 'Core i7 laptops', 'Office laptops'],
         icon: '🖥️',
+        image: dellImg,
       },
       {
         name: 'MacBooks',
         details: 'MacBook Air and MacBook Pro models for premium work, study, design, and business use.',
         examples: ['MacBook Air', 'MacBook Pro', 'Intel and Apple Silicon models'],
         icon: '🍎',
+        image: macbookImg,
       },
     ],
   },
@@ -59,19 +79,29 @@ const productGroups = [
         details: 'Apple Watch models for fitness, notifications, calls, and iPhone users.',
         examples: ['Apple Watch Series', 'Apple Watch SE', 'Apple Watch Ultra'],
         icon: '⌚',
+        image: appleWatchImg,
       },
       {
         name: 'Samsung Watch',
         details: 'Samsung Galaxy Watch models for Android users, health tracking, and smart features.',
         examples: ['Galaxy Watch 4 and newer', 'Classic models', 'LTE options where available'],
         icon: '⌚',
+        image: samsungWatchImg,
       },
       {
-        name: 'AirPods & Samsung Buds',
-        details: 'Wireless earbuds for calls, music, meetings, and everyday use.',
-        examples: ['AirPods', 'AirPods Pro', 'Samsung Buds'],
-        icon: '🎧',
+       name: 'AirPods',
+       details: 'Apple wireless earbuds for calls, music, meetings, and everyday use.',
+       examples: ['AirPods', 'AirPods Pro', 'AirPods Pro 2'],
+       icon: '🎧',
+       image: airpodsImg,
       },
+        {
+        name: 'Samsung Buds',
+        details: 'Samsung wireless earbuds for calls, music, meetings, and Android users.',
+        examples: ['Galaxy Buds 2', 'Galaxy Buds Pro', 'Galaxy Buds FE'],
+        icon: '🎧',
+        image: samsungbudsImg,
+        },
     ],
   },
   {
@@ -84,18 +114,21 @@ const productGroups = [
         details: 'Selected phone and laptop charging accessories depending on availability.',
         examples: ['Phone chargers', 'USB cables', 'Laptop chargers'],
         icon: '🔌',
+        image: chargersImg,
       },
       {
         name: 'Cases & Protection',
         details: 'Basic protection accessories for phones and selected devices.',
         examples: ['Phone cases', 'Screen protectors', 'Device protection'],
         icon: '🛡️',
+        image: casesImg,
       },
       {
         name: 'Device Setup Support',
         details: 'Assistance with basic setup, software support, email setup, and device guidance.',
         examples: ['Phone setup', 'Email setup', 'Software assistance'],
         icon: '🛠️',
+        image: supportImg,
       },
     ],
   },
@@ -164,11 +197,21 @@ function Catalogue() {
                   key={product.name}
                   className="flex flex-col rounded-3xl bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
                 >
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-100 text-2xl">
-                    {product.icon}
-                  </div>
+            <div className="mb-5 overflow-hidden rounded-2xl bg-slate-100">
+                    <img
+                        src={product.image}
+                        alt={product.name}
+                        className="h-48 w-full object-cover transition duration-300 hover:scale-105"
+                    />
+                    </div>
 
-                  <h3 className="text-xl font-bold">{product.name}</h3>
+                    <div className="mb-4 flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-100 text-xl">
+                        {product.icon}
+                    </div>
+
+                    <h3 className="text-xl font-bold">{product.name}</h3>
+                    </div>
 
                   <p className="mt-4 text-sm leading-7 text-slate-600">
                     {product.details}
