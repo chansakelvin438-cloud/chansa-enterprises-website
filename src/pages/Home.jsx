@@ -326,6 +326,99 @@ function Home() {
 </section>
 
       <section className="bg-slate-100 px-6 py-20 text-slate-950">
+  <div className="mx-auto max-w-7xl">
+    <div className="max-w-3xl">
+      <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-700">
+        Frequently Asked Questions
+      </p>
+
+      <h2 className="mt-4 text-3xl font-bold md:text-5xl">
+        Common questions before getting started.
+      </h2>
+
+      <p className="mt-4 text-slate-600">
+        These answers help customers understand how Chansa Enterprises handles
+        websites, hosting, business email, electronics, and technical support.
+      </p>
+    </div>
+
+    <div className="mt-10 grid gap-5 md:grid-cols-2">
+      {[
+        {
+          question: 'Do you build websites for small businesses?',
+          answer:
+            'Yes. Chansa Enterprises builds mobile-friendly websites for small businesses, portfolios, service providers, organisations, and personal brands.',
+        },
+        {
+          question: 'Can you help me buy and connect a domain?',
+          answer:
+            'Yes. We can guide customers through domain registration, DNS setup, hosting connection, SSL setup, and website deployment.',
+        },
+        {
+          question: 'Do you set up professional business emails?',
+          answer:
+            'Yes. We can help set up domain-based emails such as info@yourbusiness.com and guide customers on webmail, phone, and laptop access.',
+        },
+        {
+          question: 'Are electronics prices fixed?',
+          answer:
+            'No. Electronics prices change depending on availability, model, storage, condition, and supplier pricing. Customers should request current prices on WhatsApp.',
+        },
+        {
+          question: 'Do you offer phone and laptop support?',
+          answer:
+            'Yes. We offer basic support for phone setup, laptop setup, email configuration, software installation, updates, and troubleshooting guidance.',
+        },
+        {
+          question: 'How do customers request a quotation?',
+          answer:
+            'Customers can use the WhatsApp button, enquiry form, email, or contact page. The more details provided, the easier it is to give an accurate quotation.',
+        },
+      ].map((item) => (
+        <div
+          key={item.question}
+          className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
+        >
+          <h3 className="text-lg font-bold">{item.question}</h3>
+
+          <p className="mt-3 text-sm leading-7 text-slate-600">
+            {item.answer}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <div className="mt-10 rounded-3xl bg-slate-950 p-8 text-white md:p-10">
+      <div className="grid gap-6 md:grid-cols-2 md:items-center">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
+            Still Have Questions?
+          </p>
+
+          <h3 className="mt-3 text-2xl font-bold md:text-3xl">
+            Contact Chansa Enterprises directly.
+          </h3>
+
+          <p className="mt-4 text-sm leading-7 text-slate-300">
+            Send your question on WhatsApp and we will respond with guidance,
+            available options, or a quotation.
+          </p>
+        </div>
+
+        <div className="flex md:justify-end">
+          <a
+            href="https://wa.me/260967644528?text=Hello%20Chansa%20Enterprises,%20I%20have%20a%20question%20about%20your%20services."
+            className="rounded-full bg-cyan-400 px-8 py-3 font-semibold text-slate-950 hover:bg-cyan-300"
+          >
+            Ask a Question
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section className="bg-slate-100 px-6 py-20 text-slate-950">
         <div className="mx-auto max-w-7xl rounded-3xl bg-slate-950 px-6 py-12 text-center text-white md:px-12">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
             Get Started
