@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
@@ -29,6 +30,7 @@ function App() {
 
       <Footer />
       <Analytics />
+      <SpeedInsights />
     </main>
   )
 }
