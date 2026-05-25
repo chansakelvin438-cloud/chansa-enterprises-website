@@ -7,6 +7,8 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Catalogue from './pages/Catalogue'
 import Contact from './pages/Contact'
+import Portfolio from './pages/Portfolio'
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/catalogue" element={<Catalogue />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
 
       <WhatsAppButton />

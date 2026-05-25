@@ -21,6 +21,7 @@ function Footer() {
             <Link to="/" className="hover:text-cyan-300">Home</Link>
             <Link to="/services" className="hover:text-cyan-300">Services</Link>
             <Link to="/catalogue" className="hover:text-cyan-300">Catalogue</Link>
+            <Link to="/portfolio" className="hover:text-cyan-300">Portfolio</Link>
             <Link to="/about" className="hover:text-cyan-300">About</Link>
             <Link to="/contact" className="hover:text-cyan-300">Contact</Link>
           </div>
