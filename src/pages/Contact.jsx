@@ -1,3 +1,5 @@
+import EnquiryForm from '../components/EnquiryForm'
+
 const contactOptions = [
   {
     title: 'WhatsApp',
@@ -95,40 +97,39 @@ function Contact() {
 
       <section className="bg-slate-100 px-6 py-20 text-slate-950">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
-          <div className="rounded-3xl bg-slate-950 p-8 text-white shadow-xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
-              Enquiry Guide
-            </p>
+  <div className="rounded-3xl bg-slate-950 p-8 text-white shadow-xl">
+    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
+      Enquiry Guide
+    </p>
 
-            <h2 className="mt-4 text-3xl font-bold">
-              What to include when contacting us
-            </h2>
+    <h2 className="mt-4 text-3xl font-bold">
+      Tell us what you need
+    </h2>
 
-            <p className="mt-4 leading-7 text-slate-300">
-              To help us respond faster, include the service or product you need, your
-              budget range if available, your preferred timeline, and any important details.
-            </p>
-          </div>
+    <p className="mt-4 leading-7 text-slate-300">
+      Use the enquiry form to prepare your message, then continue on WhatsApp.
+      This makes it easier for Chansa Enterprises to understand your request and respond quickly.
+    </p>
 
-          <div className="grid gap-4">
-            {[
-              'For websites: mention the type of website and number of pages.',
-              'For hosting/email: mention your domain name and number of email accounts needed.',
-              'For electronics: mention the model, storage, condition, and budget.',
-              'For support: describe the issue clearly and attach screenshots where possible.',
-            ].map((item) => (
-              <div
-                key={item}
-                className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
-              >
-                <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-cyan-100 text-sm font-bold text-cyan-700">
-                  ✓
-                </span>
-                <p className="text-sm leading-7 text-slate-700">{item}</p>
-              </div>
-            ))}
-          </div>
+    <div className="mt-8 grid gap-4">
+      {[
+        'For websites: mention the type of website and number of pages.',
+        'For hosting/email: mention your domain name and number of email accounts needed.',
+        'For electronics: mention the model, storage, condition, and budget.',
+        'For support: describe the issue clearly and attach screenshots where possible.',
+      ].map((item) => (
+        <div key={item} className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-cyan-400 text-sm font-bold text-slate-950">
+            ✓
+          </span>
+          <p className="text-sm leading-7 text-slate-300">{item}</p>
         </div>
+      ))}
+    </div>
+  </div>
+
+  <EnquiryForm />
+</div>
       </section>
 
       <section className="bg-white px-6 py-20 text-slate-950">
