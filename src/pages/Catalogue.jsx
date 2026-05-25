@@ -201,7 +201,8 @@ function Catalogue() {
                     <img
                         src={product.image}
                         alt={product.name}
-                        className="h-48 w-full object-cover transition duration-300 hover:scale-105"
+                        loading="lazy"
+                        className="h-52 w-full object-cover transition duration-300 hover:scale-105"
                     />
                     </div>
 
