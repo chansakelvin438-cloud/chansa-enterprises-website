@@ -251,39 +251,79 @@ function Home() {
 </section>
 
       <section className="bg-white px-6 py-20 text-slate-950">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-700">
-              Why Choose Us
-            </p>
+  <div className="mx-auto max-w-7xl">
+    <div className="grid gap-10 md:grid-cols-2 md:items-center">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-700">
+          Why Choose Us
+        </p>
 
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-              Practical, professional and customer-focused.
-            </h2>
+        <h2 className="mt-4 text-3xl font-bold md:text-5xl">
+          Practical technology support with a professional approach.
+        </h2>
 
-            <p className="mt-4 text-slate-600">
-              Chansa Enterprises combines digital services, device support, and electronics
-              supply into one reliable technology partner.
-            </p>
-          </div>
+        <p className="mt-5 text-slate-600">
+          Chansa Enterprises focuses on helping individuals, small businesses,
+          professionals, and organisations access reliable digital services,
+          electronics, and technical support.
+        </p>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[
-              ['Affordable Digital Solutions', 'Websites, business email, graphics, and hosting support for growing businesses.'],
-              ['Fast WhatsApp Support', 'Customers can quickly request quotes, product details, and technical assistance.'],
-              ['Business & Individual Support', 'Solutions for companies, entrepreneurs, students, and personal device users.'],
-            ].map(([title, text]) => (
-              <div key={title} className="rounded-2xl border border-slate-200 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-100 text-xl">
-                  ✓
-                </div>
-                <h3 className="font-bold">{title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{text}</p>
-              </div>
-            ))}
-          </div>
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="/services"
+            className="rounded-full bg-slate-950 px-7 py-3 text-center font-semibold text-white hover:bg-slate-800"
+          >
+            View Services
+          </a>
+
+          <a
+            href="https://wa.me/260967644528?text=Hello%20Chansa%20Enterprises,%20I%20would%20like%20to%20ask%20about%20your%20services."
+            className="rounded-full border border-slate-300 px-7 py-3 text-center font-semibold text-slate-950 hover:bg-slate-100"
+          >
+            Ask on WhatsApp
+          </a>
         </div>
-      </section>
+      </div>
+
+      <div className="grid gap-4">
+        {[
+          {
+            title: 'Clear Communication',
+            text: 'We explain services, pricing, requirements, and next steps in a simple and professional way.',
+          },
+          {
+            title: 'Business-Focused Solutions',
+            text: 'Our services are designed to support real business needs such as websites, email, catalogues, and IT setup.',
+          },
+          {
+            title: 'Digital and Device Support',
+            text: 'Customers can get help with both online services and practical device-related support.',
+          },
+          {
+            title: 'Flexible Service Packages',
+            text: 'Solutions can be adjusted depending on the customer’s budget, scope, and technical requirements.',
+          },
+        ].map((item) => (
+          <div
+            key={item.title}
+            className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+          >
+            <div className="flex gap-4">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cyan-100 text-sm font-bold text-cyan-700">
+                ✓
+              </span>
+
+              <div>
+                <h3 className="font-bold text-slate-950">{item.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-slate-600">{item.text}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="bg-slate-100 px-6 py-20 text-slate-950">
         <div className="mx-auto max-w-7xl rounded-3xl bg-slate-950 px-6 py-12 text-center text-white md:px-12">
