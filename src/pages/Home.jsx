@@ -163,6 +163,92 @@ function Home() {
     </div>
   </div>
 </section>
+       <section className="bg-slate-100 px-6 py-20 text-slate-950">
+  <div className="mx-auto max-w-7xl">
+    <div className="max-w-3xl">
+      <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-700">
+        How It Works
+      </p>
+
+      <h2 className="mt-4 text-3xl font-bold md:text-5xl">
+        Simple steps to get started with Chansa Enterprises.
+      </h2>
+
+      <p className="mt-4 text-slate-600">
+        Whether you need a website, business email, electronics, graphic design,
+        hosting, or technical support, the process is simple and customer-focused.
+      </p>
+    </div>
+
+    <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {[
+        {
+          step: '01',
+          title: 'Choose What You Need',
+          text: 'Select a service, package, product category, or technical support option.',
+        },
+        {
+          step: '02',
+          title: 'Send an Enquiry',
+          text: 'Contact us through WhatsApp, email, or the enquiry form with your request.',
+        },
+        {
+          step: '03',
+          title: 'Get a Quote',
+          text: 'We review your request and provide guidance, options, pricing, and next steps.',
+        },
+        {
+          step: '04',
+          title: 'Receive Support',
+          text: 'We help with delivery, setup, configuration, troubleshooting, or project completion.',
+        },
+      ].map((item) => (
+        <div
+          key={item.step}
+          className="rounded-3xl bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-100 text-sm font-black text-cyan-700">
+            {item.step}
+          </div>
+
+          <h3 className="text-xl font-bold">{item.title}</h3>
+
+          <p className="mt-4 text-sm leading-7 text-slate-600">
+            {item.text}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <div className="mt-10 rounded-3xl bg-slate-950 p-8 text-white md:p-10">
+      <div className="grid gap-6 md:grid-cols-2 md:items-center">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
+            Quick Start
+          </p>
+
+          <h3 className="mt-3 text-2xl font-bold md:text-3xl">
+            Ready to start? Send your request on WhatsApp.
+          </h3>
+
+          <p className="mt-4 text-sm leading-7 text-slate-300">
+            Tell us what you need, your budget range if available, and your preferred timeline.
+            We will respond with the next steps.
+          </p>
+        </div>
+
+        <div className="flex md:justify-end">
+          <a
+            href="https://wa.me/260967644528?text=Hello%20Chansa%20Enterprises,%20I%20would%20like%20to%20start%20an%20enquiry."
+            className="rounded-full bg-cyan-400 px-8 py-3 font-semibold text-slate-950 hover:bg-cyan-300"
+          >
+            Start an Enquiry
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="bg-white px-6 py-20 text-slate-950">
         <div className="mx-auto max-w-7xl">
