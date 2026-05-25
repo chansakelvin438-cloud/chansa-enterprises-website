@@ -81,6 +81,88 @@ function Home() {
           </div>
         </div>
       </section>
+       
+       <section className="bg-white px-6 py-20 text-slate-950">
+  <div className="mx-auto max-w-7xl">
+    <div className="max-w-3xl">
+      <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-700">
+        Featured Services
+      </p>
+
+      <h2 className="mt-4 text-3xl font-bold md:text-5xl">
+        Technology services built for businesses and individuals.
+      </h2>
+
+      <p className="mt-4 text-slate-600">
+        Chansa Enterprises brings together digital services, electronics, hosting,
+        email setup, and technical support under one professional brand.
+      </p>
+    </div>
+
+    <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {[
+        {
+          title: 'Web Development',
+          text: 'Professional websites for businesses, brands, portfolios, shops, and organisations.',
+          link: '/services',
+          icon: '🌐',
+        },
+        {
+          title: 'Business Email',
+          text: 'Professional email setup using your domain, such as info@yourbusiness.com.',
+          link: '/services',
+          icon: '✉️',
+        },
+        {
+          title: 'Domains & Hosting',
+          text: 'Domain connection, hosting setup, SSL support, and website deployment assistance.',
+          link: '/services',
+          icon: '🚀',
+        },
+        {
+          title: 'Electronics Catalogue',
+          text: 'Phones, laptops, smart watches, earbuds, accessories, and device support.',
+          link: '/catalogue',
+          icon: '📱',
+        },
+        {
+          title: 'IT Support',
+          text: 'Software troubleshooting, phone and laptop support, networking, and technical guidance.',
+          link: '/services',
+          icon: '🛠️',
+        },
+        {
+          title: 'Graphic Design',
+          text: 'Posters, catalogues, adverts, business branding, and social media graphics.',
+          link: '/services',
+          icon: '🎨',
+        },
+      ].map((service) => (
+        <div
+          key={service.title}
+          className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-100 text-2xl">
+            {service.icon}
+          </div>
+
+          <h3 className="text-xl font-bold">{service.title}</h3>
+
+          <p className="mt-4 text-sm leading-7 text-slate-600">
+            {service.text}
+          </p>
+
+          <a
+            href={service.link}
+            className="mt-6 inline-block text-sm font-semibold text-cyan-700"
+          >
+            Learn more →
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="bg-white px-6 py-20 text-slate-950">
         <div className="mx-auto max-w-7xl">
