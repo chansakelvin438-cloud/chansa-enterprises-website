@@ -58,7 +58,7 @@ const services = [
 const packages = [
   {
     name: 'Basic Website Package',
-    price: 'Request Quote',
+    price: 'From K1,500',
     description:
       'Ideal for individuals, small businesses, portfolios, and simple company profiles.',
     features: [
@@ -71,7 +71,7 @@ const packages = [
   },
   {
     name: 'Business Website Package',
-    price: 'Request Quote',
+    price: 'From K3,000',
     description:
       'Best for growing businesses that need a stronger online presence and professional contact setup.',
     features: [
@@ -84,7 +84,7 @@ const packages = [
   },
   {
     name: 'Premium Website Package',
-    price: 'Request Quote',
+    price: 'From K5,500',
     description:
       'For businesses that need advanced sections, catalogues, stronger branding, and future scalability.',
     features: [
@@ -97,7 +97,7 @@ const packages = [
   },
   {
     name: 'Business Email Setup',
-    price: 'Request Quote',
+    price: 'From K500',
     description:
       'Professional email setup using your own domain, such as info@yourbusiness.com.',
     features: [
@@ -110,7 +110,7 @@ const packages = [
   },
   {
     name: 'Domain & Hosting Setup',
-    price: 'Request Quote',
+    price: 'From K700',
     description:
       'Support for buying domains, connecting DNS, setting up hosting, SSL, and deployment.',
     features: [
@@ -122,16 +122,94 @@ const packages = [
     ],
   },
   {
-    name: 'IT Support Package',
+    name: 'Graphic Design Package',
+    price: 'From K150',
+    description:
+      'Design support for adverts, posters, catalogues, social media graphics, and business branding.',
+    features: [
+      'Business posters',
+      'Social media adverts',
+      'Product catalogue designs',
+      'Basic brand graphics',
+      'Marketing visuals',
+    ],
+  },
+  {
+    name: 'Network Setup Package',
+    price: 'From K400',
+    description:
+      'Basic network setup and troubleshooting for homes, offices, shops, and small businesses.',
+    features: [
+      'Wi-Fi setup',
+      'Router configuration',
+      'Basic LAN setup',
+      'Network troubleshooting',
+      'Connectivity guidance',
+    ],
+  },
+  {
+    name: 'Software Troubleshooting',
+    price: 'From K250',
+    description:
+      'Support for common software issues, app installation, device errors, system updates, and configuration.',
+    features: [
+      'Software installation',
+      'System error checks',
+      'App setup',
+      'Basic device configuration',
+      'Troubleshooting guidance',
+    ],
+  },
+  {
+    name: 'Phone & Laptop Support',
+    price: 'From K250',
+    description:
+      'Technical support for phones and laptops, including setup, configuration, and basic diagnostics.',
+    features: [
+      'Phone setup',
+      'Laptop setup',
+      'Email setup on devices',
+      'Software support',
+      'Basic diagnostics',
+    ],
+  },
+  {
+    name: 'Game & Software Development',
     price: 'Request Quote',
     description:
-      'Practical technical support for software issues, devices, networks, and business systems.',
+      'Custom software concepts, prototypes, business tools, and game development projects.',
     features: [
-      'Software troubleshooting',
-      'Phone and laptop support',
-      'Network setup guidance',
-      'System configuration help',
-      'General technical assistance',
+      'Software prototypes',
+      'Business tools',
+      'Game projects',
+      'Custom development',
+      'Project-based quotation',
+    ],
+  },
+  {
+    name: 'Electronics Sourcing Support',
+    price: 'Prices on Request',
+    description:
+      'Support for customers looking for phones, laptops, watches, earbuds, accessories, and selected electronics.',
+    features: [
+      'Phones',
+      'Laptops',
+      'Smart watches',
+      'Earbuds and accessories',
+      'Current stock confirmation',
+    ],
+  },
+  {
+    name: 'Business IT Support Package',
+    price: 'From K500',
+    description:
+      'General technology support for small businesses that need practical IT assistance.',
+    features: [
+      'Technical support',
+      'Digital setup',
+      'Business systems support',
+      'Device and software guidance',
+      'Ongoing assistance',
     ],
   },
 ]
@@ -272,7 +350,11 @@ function Services() {
         </div>
       ))}
     </div>
-
+    <div className="mt-8 rounded-2xl border border-cyan-200 bg-cyan-50 p-5 text-sm leading-7 text-slate-700">
+  <strong className="text-slate-950">Note:</strong> Prices shown are starting estimates.
+  Final quotations depend on the project scope, number of pages, content requirements,
+  hosting/email needs, design complexity, device condition, stock availability, and support required.
+</div>
                 <div className="mt-12 rounded-3xl bg-slate-950 p-8 text-white md:p-12">
                     <div className="grid gap-8 md:grid-cols-2 md:items-center">
                         <div>
