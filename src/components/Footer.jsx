@@ -3,6 +3,44 @@ import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <footer className="border-t border-white/10 bg-slate-950 px-6 py-12 text-slate-300">
+      
+      <div className="bg-slate-950 px-6 py-16 text-white">
+  <div className="mx-auto max-w-7xl rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12">
+    <div className="grid gap-8 md:grid-cols-2 md:items-center">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
+          Ready to Start?
+        </p>
+
+        <h2 className="mt-4 text-3xl font-bold md:text-4xl">
+          Let’s build your website, business email, catalogue, or tech setup.
+        </h2>
+
+        <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300">
+          Contact Chansa Enterprises for professional websites, hosting, business email,
+          electronics, graphic design, networking, software support, and IT solutions.
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-4 sm:flex-row md:justify-end">
+        <a
+          href="https://wa.me/260967644528?text=Hello%20Chansa%20Enterprises,%20I%20would%20like%20to%20request%20a%20quotation."
+          className="rounded-full bg-cyan-400 px-7 py-3 text-center font-semibold text-slate-950 hover:bg-cyan-300"
+        >
+          Request a Quote
+        </a>
+
+        <a
+          href="mailto:info@chansaenterprises.com"
+          className="rounded-full border border-white/20 px-7 py-3 text-center font-semibold text-white hover:bg-white/10"
+        >
+          Email Us
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+      
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
         <div>
           <h2 className="text-xl font-bold text-white">Chansa Enterprises</h2>
