@@ -1,3 +1,5 @@
+import SEO from '../components/SEO'
+
 const projects = [
   {
     title: 'Chansa Enterprises Website',
@@ -46,6 +48,12 @@ const projects = [
 function Portfolio() {
   return (
     <>
+       <SEO
+  title="Portfolio & Projects | Chansa Enterprises"
+  description="View Chansa Enterprises projects in web development, business email setup, catalogue design, branding, SEO setup, and software development."
+  url="https://chansaenterprises.com/portfolio"
+/>
+
       <section className="bg-slate-950 px-6 py-20 text-white">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">

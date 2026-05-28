@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import iphoneImg from '../assets/products/iphone.jpg'
 import samsungImg from '../assets/products/samsung.jpg'
 import pixelImg from '../assets/products/pixel.jpg'
@@ -136,7 +137,12 @@ const productGroups = [
 
 function Catalogue() {
   return (
-    <>
+    <>  
+       <SEO
+  title="Phones, Laptops & Electronics Catalogue | Chansa Enterprises"
+  description="Browse Chansa Enterprises electronics catalogue for iPhones, Samsung phones, Google Pixel phones, laptops, smart watches, earbuds, accessories, and device support."
+  url="https://chansaenterprises.com/catalogue"
+/>
       <section className="bg-slate-950 px-6 py-20 text-white">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">

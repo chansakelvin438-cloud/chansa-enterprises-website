@@ -1,6 +1,14 @@
+import SEO from '../components/SEO'
+
 function Home() {
   return (
     <>
+
+       <SEO
+            title="Chansa Enterprises | Smart Tech Solutions"
+            description="Chansa Enterprises provides web development, hosting, business email, electronics, graphic design, networking, software support, and IT solutions."
+            url="https://chansaenterprises.com"
+            />
       <section className="relative overflow-hidden bg-slate-950 px-6 py-16 text-white md:py-24">
         <div className="absolute left-1/2 top-20 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/20 blur-3xl"></div>
         <div className="absolute right-10 top-40 h-60 w-60 rounded-full bg-blue-500/20 blur-3xl"></div>

@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import EnquiryForm from '../components/EnquiryForm'
 
 const contactOptions = [
@@ -29,7 +30,13 @@ const contactOptions = [
 
 function Contact() {
   return (
-    <>
+    <>  
+       <SEO
+  title="Contact Chansa Enterprises | Web, Email, Electronics & IT Support"
+  description="Contact Chansa Enterprises for websites, hosting, business email, electronics, graphic design, networking, software support, and IT assistance."
+  url="https://chansaenterprises.com/contact"
+/>
+
       <section className="bg-slate-950 px-6 py-20 text-white">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">

@@ -1,6 +1,14 @@
+import SEO from '../components/SEO'
+
 function About() {
   return (
     <>
+       <SEO
+  title="About Chansa Enterprises | Technology Services in Zambia"
+  description="Learn about Chansa Enterprises, a technology-focused business providing digital services, electronics, and IT support for businesses and individuals."
+  url="https://chansaenterprises.com/about"
+/>
+
       <section className="bg-slate-950 px-6 py-20 text-white">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">

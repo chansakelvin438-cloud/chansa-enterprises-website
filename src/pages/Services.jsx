@@ -1,3 +1,5 @@
+import SEO from '../components/SEO'
+
 const services = [
   {
     title: 'Web Development',
@@ -217,6 +219,11 @@ const packages = [
 function Services() {
   return (
     <>
+      <SEO
+            title="Web Development, Hosting & IT Support | Chansa Enterprises"
+            description="Explore Chansa Enterprises services including web development, hosting, business email setup, graphic design, networking, software troubleshooting, and IT support."
+            url="https://chansaenterprises.com/services"
+            />
       <section className="bg-slate-950 px-6 py-20 text-white">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
