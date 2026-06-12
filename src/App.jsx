@@ -10,6 +10,9 @@ import Services from './pages/Services'
 import Catalogue from './pages/Catalogue'
 import Contact from './pages/Contact'
 import Portfolio from './pages/Portfolio'
+import PriceGuide from './pages/PriceGuide'
+import Blog from './pages/Blog'
+import BlogArticle from './pages/BlogArticle'
 
 
 function App() {
@@ -22,8 +25,11 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/catalogue" element={<Catalogue />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogArticle />} /> 
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/price-guide" element={<PriceGuide />} />
       </Routes>
 
       <WhatsAppButton />

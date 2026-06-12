@@ -1,4 +1,7 @@
-import SEO from '../components/SEO'
+import SEO from '../components/SEO';
+import WebsiteReadinessChecker from "../components/WebsiteReadinessChecker";
+import WebsitePackageCalculator from '../components/WebsitePackageCalculator';
+import FeaturedDeals from '../components/FeaturedDeals';
 
 function Home() {
   return (
@@ -89,7 +92,9 @@ function Home() {
           </div>
         </div>
       </section>
-       
+      <WebsiteReadinessChecker /> 
+      <WebsitePackageCalculator />
+      <FeaturedDeals />
        <section className="bg-white px-6 py-20 text-slate-950">
   <div className="mx-auto max-w-7xl">
     <div className="max-w-3xl">
